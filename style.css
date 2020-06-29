@@ -1,0 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* index.html */
+.background-block {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(124, 124, 124);
+  opacity: 1;
+}
+
+.head-image {
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+
+.content-block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: rgba(50, 50, 50, 0.7);
+  padding: 7%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Courier New';
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.menu-block > ul {
+  text-align: right;
+  list-style: none;
+}
+
+.menu-block > ul > li > a {
+  font-size: 1.1em;
+  color: #dfdfdf;
+  text-decoration: none;
+  line-height: 2em;
+}
+
+.icon-wrapper {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.social {
+  background-color: transparent;
+}
+
+.use-icon {
+  fill: transparent;
+}
+
+.use-mask {
+  fill: #c7c7c7;
+}
+
+.use-mask:hover {
+  fill: #fff;
+}
+
+/* 
+  contact.html
+*/
+.contact-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Courier New';
+  box-sizing: border-box;
+  background-color: #eeeeee;
+}
+
+.contact-title-container {
+  text-align: center;
+}
+
+.contact-content-container {
+  text-align: center;
+}
+
+.contact-title-container > h1 {
+  font-weight: normal;
+  margin-bottom: 0.2em;
+}
+
+.contact-title-container > h2 {
+  letter-spacing: 0.7em;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.contact-title-container a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-content-container a {
+  color: #000;
+}
