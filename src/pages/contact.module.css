@@ -1,0 +1,43 @@
+.contact {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Courier New';
+  box-sizing: border-box;
+  background-color: #eeeeee;
+}
+
+.contactTitle {
+  text-align: center;
+}
+
+.contactTitle > h1 {
+  font-weight: normal;
+  margin-bottom: 0.2em;
+}
+
+.contactTitle > h2 {
+  letter-spacing: 0.7em;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.contactTitle a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contactContent {
+  text-align: center;
+}
+
+.contactContent a {
+  color: #000;
+}
