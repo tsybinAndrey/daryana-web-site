@@ -10,10 +10,27 @@ import style from "./work.module.css"
 const Gallery = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(
+      left: allFile(
         filter: {
           extension: { regex: "/(jpg)/" }
-          relativeDirectory: { eq: "gallery" }
+          relativeDirectory: { eq: "gallery-left" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+      right: allFile(
+        filter: {
+          extension: { regex: "/(jpg)/" }
+          relativeDirectory: { eq: "gallery-right" }
         }
       ) {
         edges {
@@ -29,12 +46,9 @@ const Gallery = () => {
       }
     }
   `)
-  const edges = data.allFile.edges
-  const numOfPhotos = edges.length
-  const middleEdgeNum = Math.floor(numOfPhotos/2)
 
-  const leftColumn = edges.slice(0, middleEdgeNum)
-  const rightColumn = edges.slice(middleEdgeNum)
+  const leftColumn = data.left.edges
+  const rightColumn = data.right.edges
 
   return (
     <>
