@@ -1,0 +1,88 @@
+.background {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgb(124, 124, 124);
+  opacity: 1;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: rgba(50, 50, 50, 0.7);
+  padding: 7%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Courier New';
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.logoImg {
+  height: 84px;
+  width: 79px;
+}
+
+.menuBlock > ul {
+  text-align: right;
+  list-style: none;
+}
+
+.menuBlock > ul > li > a {
+  font-size: 1.1em;
+  color: #dfdfdf;
+  text-decoration: none;
+  line-height: 2em;
+}
+
+.iconWrapper:last-child {
+  margin-left: 10px;
+}
+
+.iconWrapper {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.iconWrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.social {
+  background-color: transparent;
+}
+
+.useIcon {
+  fill: transparent;
+}
+
+.useMask {
+  fill: #c7c7c7;
+}
+
+.useMask:hover {
+  fill: #fff;
+}
