@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "home": "Home",
+    "contact": "Сontact",
+    "work": "Work"
+  },
+  "phone": "phone",
+  "index": {
+    "title": "Home | Photographer Daryana Osotkina",
+    "description": "Your photography, videography guide"
+  },
+  "work": {
+    "title": "Work | Photographer Daryana Osotkina",
+    "description": "Your photography, videography guide"
+  },
+  "contact": {
+    "title": "Contact | Photographer Daryana Osotkina",
+    "description": "Your photography, videography guide"
+  }
+}

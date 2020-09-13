@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 
 import SEO from "../components/seo"
 import LogoImage from "../components/logo-image";
+import { useTranslations } from "../components/use-translations"
 
 import style from "./work.module.css"
 
@@ -87,14 +88,22 @@ const Gallery = () => {
   )
 }
 
-const Work = () => {
+const Work = ({ pageContext }) => {
+  const { locale, isDefaultLocale } = pageContext
+
+  const translations = useTranslations(locale)
+  const homeLink = isDefaultLocale ? "/" : `/${locale}/`
+  
   return (
     <>
-      <SEO title="Work" />
+      <SEO
+        title={translations.work.title}
+        description={translations.work.description}
+      />
       <div className={style.work}>
         <div className={style.header}>
           <div>
-            <a href="/">Home | Домой</a>
+            <a href={homeLink}>{translations.menu.home}</a>
           </div>
           <div>
             <LogoImage className={style.logoImg}/>

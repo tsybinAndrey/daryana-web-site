@@ -86,3 +86,8 @@
 .useMask:hover {
   fill: #fff;
 }
+
+.footerUpperBlock {
+  text-align: right;
+  margin-bottom: 20px;
+}
