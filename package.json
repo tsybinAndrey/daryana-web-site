@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Tcybin Andrei <tcandrei@bk.ru>",
   "dependencies": {
+    "@fs/gatsby-plugin-drive": "^0.2.1",
     "gatsby": "^2.23.12",
     "gatsby-image": "^2.4.9",
     "gatsby-plugin-google-analytics": "^2.3.13",
@@ -35,6 +36,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "clean:gallery": "rimraf src/images/gallery-left && rimraf src/images/gallery-right",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
