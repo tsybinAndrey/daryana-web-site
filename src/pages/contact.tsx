@@ -37,7 +37,7 @@ const ContactPage = ({ pageContext }) => {
             <a
               target="_blank"
               title="Contact Me On Telegram"
-              href="https://t.me/osotkinadaryana"
+              href="https://t.me/osotkinaph"
             >Telegram</a>
           </p>
         </div>
