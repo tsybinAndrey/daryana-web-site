@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import LogoImage from "../components/logo-image";
 import { useTranslations } from "../components/use-translations"
 
-import style from "./work.module.css"
+import * as style from "./work.module.css"
 
 const Gallery = () => {
   const data = useStaticQuery(graphql`

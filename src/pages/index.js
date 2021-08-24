@@ -1,12 +1,12 @@
 import React from "react"
-import { Link, graphql, navigate } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 import BackgroundImage from "../components/background-image"
 import LogoImage from "../components/logo-image"
 import SEO from "../components/seo"
 import { useTranslations } from "../components/use-translations";
 
-import style from "./index.module.css"
+import * as style from "./index.module.css"
 
 const IndexPage = ({ pageContext }) => {
   const { locale, isDefaultLocale } = pageContext
@@ -15,6 +15,7 @@ const IndexPage = ({ pageContext }) => {
 
   const workLink = isDefaultLocale ? "/work/" : `/${locale}/work/`
   const contactLink = isDefaultLocale ? "/contact/" : `/${locale}/contact/`
+  const shopLink = isDefaultLocale ? "/shop/" : `/${locale}/shop/`
 
   // TODO
   // move it to separate component with proper state handling
@@ -44,6 +45,7 @@ const IndexPage = ({ pageContext }) => {
           <ul>
             <li><Link to={workLink}>{translations.menu.work.toLowerCase()}</Link></li>
             <li><Link to={contactLink}>{translations.menu.contact.toLowerCase()}</Link></li>
+            <li><Link to={shopLink}>{translations.menu.shop.toLowerCase()}</Link></li>
           </ul>
         </div>
         <footer>

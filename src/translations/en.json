@@ -2,7 +2,8 @@
   "menu": {
     "home": "Home",
     "contact": "Сontact",
-    "work": "Work"
+    "work": "Work",
+    "shop": "Shop"
   },
   "phone": "phone",
   "index": {
@@ -15,6 +16,10 @@
   },
   "contact": {
     "title": "Contact | Photographer Daryana Osotkina",
+    "description": "Russian photographer, videographer. Portrait photography, art photography, family photography, love photorgaphy"
+  },
+  "shop": {
+    "title": "Shop | Photographer Daryana Osotkina",
     "description": "Russian photographer, videographer. Portrait photography, art photography, family photography, love photorgaphy"
   }
 }

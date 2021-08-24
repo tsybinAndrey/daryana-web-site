@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
-import style from "./contact.module.css"
+import * as style from "./contact.module.css"
 import { useTranslations } from "../components/use-translations"
 
 const ContactPage = ({ pageContext }) => {
