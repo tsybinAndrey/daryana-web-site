@@ -1,18 +1,26 @@
 import React from 'react'
 import {Card} from 'primereact/card'
 
+import * as pageStyles from "./index.module.css"
 import SEO from "../../components/seo"
 import Image from "../../components/background-image"
 import { useTranslations } from "../../components/use-translations"
 
-const ContactPage = ({ pageContext }) => {
+const ShopPage = ({ pageContext }) => {
   const { locale, isDefaultLocale } = pageContext
 
   const translations = useTranslations(locale)
   const homeLink = isDefaultLocale ? "/" : `/${locale}/`
 
-  const header = <Image />
-  const footer = <span>25 000 rub</span>
+  const header = (imgPath) => <img src={`/${imgPath}`} alt="Logo" />
+  const footer = (price) => (
+    <div
+      className={pageStyles.price}  
+    >
+      <span>{price}</span>
+    </div>
+  )
+
   return (
     <>
       <SEO
@@ -21,22 +29,28 @@ const ContactPage = ({ pageContext }) => {
       />
       <div className="p-grid p-justify-center p-nogutter">
         <div className="p-col-11 p-nogutter">
-          <div className="p-d-flex p-flex-column p-flex-md-row p-jc-center p-ai-center p-flex-wrap">
-            {[1,2,3,4,5].map(() => {
+          <div
+            className={pageStyles.cardContainer}
+          >
+            {translations.shop.prices.map((shotType) => {
               return (
                 <Card
-                  className="p-m-2 p-component"
-                  style={{width: "20em"}}
-                  title="Портретная съемка в студии"
-                  subTitle="Индивидуальная съемка для одного человека"
-                  header={header}
-                  footer={footer}
+                  key={shotType.title}
+                  className={`p-m-3 ${pageStyles.cardFontSize}`}
+                  title={shotType.title}
+                  subTitle={shotType.subtitle}
+                  header={header(shotType.image)}
+                  footer={footer(shotType.price)}
                 >
-                  В стоимость входит:<br/>
-                  <ul>
-                    <li>Аренда студии на 2 часа</li>
-                    <li>20 кадров в авторской обработке и ретуши</li>
-                    <li>Видеоролик до 1 минуты</li>
+                  <b>{shotType.includesText}</b><br/>
+                  <ul
+                    className={pageStyles.includesList}
+                  >
+                    {shotType.includesList.map((sometext) => (
+                      <li
+                        key={sometext}
+                      >{sometext}</li>
+                    ))}
                   </ul>
                 </Card>
               )
@@ -48,4 +62,4 @@ const ContactPage = ({ pageContext }) => {
   )
 }
 
-export default ContactPage
+export default ShopPage

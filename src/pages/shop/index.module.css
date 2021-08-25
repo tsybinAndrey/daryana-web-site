@@ -1,0 +1,33 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
+}
+
+.price {
+  text-align: center;
+  font-weight: bold;
+}
+
+.includesList {
+  padding-left: 1em;
+  margin: 0.5em 0;
+  min-height: 3em;
+}
+
+.cardFontSize {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
