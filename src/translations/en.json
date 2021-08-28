@@ -21,6 +21,8 @@
   "shop": {
     "title": "Shop | Photographer Daryana Osotkina",
     "description": "Russian photographer, videographer. Portrait photography, art photography, family photography, love photorgaphy",
+    "commonInfo": "Common Information",
+    "terms": "Terms and Conditions",
     "prices": [
       {
         "image": "studio_one.jpg",
@@ -67,6 +69,39 @@
           "15 кадров в авторской обработке и ретуши"
         ],
         "price": "15 000 руб"
+      },
+      {
+        "image": "gift.jpg",
+        "title": "Подарочный сертификат",
+        "subtitle": "",
+        "includesText": "В стоимость входит",
+        "includesList": [
+          "выбранный вами формат съемки",
+          "все, что входит в этот тип съемки"
+        ],
+        "price": "Бесценно"
+      },
+      {
+        "image": "stylist.jpg",
+        "title": "Стилист",
+        "subtitle": "Услуги стилиста к съемке в студии или на улице",
+        "includesText": "В стоимость входит",
+        "includesList": [
+          "стоимость 1 образа",
+          "цена зависит от сложности"
+        ],
+        "price": "4 000 - 8 000руб"
+      },
+      {
+        "image": "visagist.jpg",
+        "title": "Визажист",
+        "subtitle": "Услуги визажиста к съемке в студии или на улице",
+        "includesText": "В стоимость входит",
+        "includesList": [
+          "макияж",
+          "укладка"
+        ],
+        "price": "10 000руб"
       }
     ]
   }
