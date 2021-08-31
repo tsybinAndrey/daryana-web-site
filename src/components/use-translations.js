@@ -40,8 +40,15 @@ export const query = graphql`
             shop {
               description
               title
-              commonInfo
-              terms
+              commonInfo {
+                title
+                list
+              }
+              terms {
+                title
+                list
+              }
+              shop
               prices {
                 image
                 title

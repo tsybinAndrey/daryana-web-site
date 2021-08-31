@@ -31,30 +31,22 @@ const ShopPage = ({ pageContext }) => {
         <div className="p-col-11 p-nogutter">
         <Divider align="left">
             <div className="p-d-inline-flex p-ai-center">
-                <b>{translations.shop.commonInfo}</b>
+                <b>{translations.shop.commonInfo.title}</b>
             </div>
           </Divider>
           <div className="p-text-normal">
-            <p className="p-component">
-              <ul style={{listStyle: "none"}}>
-                <li>
+            <ul className="p-component" style={{listStyle: "none"}}>
+              {translations.shop.commonInfo.list.map((info) =>(
+                <li key={info}>
                   <i className="pi pi-check" style={{'fontSize': '2em'}}></i>
-                  Опыт съемок не обязателен
+                  {info}
                 </li>
-                <li>
-                  <i className="pi pi-check" style={{'fontSize': '2em'}}></i>
-                  Отсутствие опыта приветствуется
-                </li>
-                <li>
-                  <i className="pi pi-check" style={{'fontSize': '2em'}}></i>
-                  Я помогу вам с позированием, стилизацией и ощущение комфорта
-                </li>
-              </ul>
-            </p>
+              ))}
+            </ul>
           </div>
           <Divider align="left">
             <div className="p-d-inline-flex p-ai-center">
-                <b>Магазин</b>
+                <b>{translations.shop.shop}</b>
             </div>
           </Divider>
           <div
@@ -86,35 +78,15 @@ const ShopPage = ({ pageContext }) => {
           </div>
           <Divider align="left">
             <div className="p-d-inline-flex p-ai-center">
-                <b>{translations.shop.terms}</b>
+                <b>{translations.shop.terms.title}</b>
             </div>
           </Divider>
           <div className="p-text-normal">
-            <p className="p-component" style={{color: "#707070"}}>
-              <ul>
-                <li>
-                  Локация зависит от концепции съемки. Съемка может проходить на улице или в фотостудии (студия оплачивается отдельно);
-                </li>
-                <li>
-                  Все кадры на выходе будут в цвете и черно-белой обработке. Примеры и стилистику работ можно посмотреть на сайте;
-                </li>
-                <li>
-                  Я самостоятельно выбираю кадры на обработку. Исходники не передаются заказчику;
-                </li>
-                <li>
-                  Бронь даты и времени осуществляется после предоплаты в размере 5 000 рублей;
-                </li>
-                <li>
-                  Предоплата невозвратная;
-                </li>
-                <li>
-                  Перенос возможен 1 раз и не позднее, чем за 4 дня до фотосессии;
-                </li>
-                <li>
-                  Срок выполнения работы 2 недели;
-                </li>
-              </ul>
-            </p>
+            <ul className="p-component" style={{color: "#707070"}}>
+              {translations.shop.terms.list.map((term) => (
+                <li>{term}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
