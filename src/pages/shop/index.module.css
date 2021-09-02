@@ -1,3 +1,25 @@
+.contactTitle {
+  font-family: 'Courier New';
+  text-align: center;
+}
+
+.contactTitle > h1 {
+  font-weight: normal;
+  margin-bottom: 0.2em;
+}
+
+.contactTitle > h2 {
+  letter-spacing: 0.7em;
+  font-weight: normal;
+  font-size: 1em;
+  text-align: center;
+}
+
+.contactTitle a {
+  color: #000;
+  text-decoration: none;
+}
+
 .cardContainer {
   display: grid;
   grid-template-columns: 1fr;
@@ -17,7 +39,11 @@
 }
 
 .cardFontSize {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.dividerContent {
+  color: #666;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {

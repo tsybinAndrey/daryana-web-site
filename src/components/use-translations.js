@@ -40,10 +40,6 @@ export const query = graphql`
             shop {
               description
               title
-              commonInfo {
-                title
-                list
-              }
               terms {
                 title
                 list

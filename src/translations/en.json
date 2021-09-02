@@ -21,17 +21,11 @@
   "shop": {
     "title": "Shop | Photographer Daryana Osotkina",
     "description": "Russian photographer, videographer. Portrait photography, art photography, family photography, love photorgaphy",
-    "commonInfo": {
-      "title": "Common Information",
-      "list": [
-        "Опыт съемок не обязателен",
-        "Отсутствие опыта приветствуется",
-        "Я помогу вам с позированием, стилизацией и ощущение комфорта"
-      ]
-    },
     "terms": {
       "title": "Terms and Conditions",
       "list": [
+        "Опыт съемок не обязателен. Отсутствие опыта приветствуется;",
+        "Я помогу вам с позированием, стилизацией и ощущение комфорта",
         "Локация зависит от концепции съемки. Съемка может проходить на улице или в фотостудии (студия оплачивается отдельно);",
         "Все кадры на выходе будут в цвете и черно-белой обработке. Примеры и стилистику работ можно посмотреть на сайте;",
         "Я самостоятельно выбираю кадры на обработку. Исходники не передаются заказчику;",
@@ -92,7 +86,7 @@
       {
         "image": "gift.jpg",
         "title": "Gift",
-        "subtitle": "Gift card for one or more photo shootings",
+        "subtitle": "Gift card for photo shooting",
         "includesText": "Included in price",
         "includesList": [
           "type of shooting choosen by you",

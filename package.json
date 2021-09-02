@@ -27,6 +27,7 @@
     "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "prettier": "^2.3.2"
   },
   "keywords": [
@@ -37,10 +38,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "NODE_ENV=development npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "clean:gallery": "rimraf src/images/gallery-left && rimraf src/images/gallery-right",
+    "clean:gallery": "rimraf src/images/gallery-left && rimraf src/images/gallery-right && rimraf src/images/shop-photos",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
