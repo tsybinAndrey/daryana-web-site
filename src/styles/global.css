@@ -3,6 +3,21 @@
   font-size: 1.4em;
 }
 
+.p-card .p-card-subtitle {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+  min-height: 2rem;
+}
+
+.p-card .p-card-body {
+  flex-grow: 2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .p-divider .p-divider-content {
   background-color: #eeeeee;
 }
