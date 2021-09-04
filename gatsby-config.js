@@ -1,4 +1,10 @@
 const path = require('path')
+const environment = process.env.NODE_ENV
+
+if (environment === 'development') {
+  require('dotenv').config()
+}
+
 
 module.exports = {
   siteMetadata: {
@@ -24,6 +30,16 @@ module.exports = {
         folderId: process.env.GALLERY_RIGHT_FOLDER_ID,
         key: JSON.parse(process.env.GOOGLE_SERVICE_FILE),
         destination: path.join(__dirname, 'src/images/gallery-right'),
+        exportGDocs: true,
+        exportMimeType: 'image/jpg',
+      }
+    },
+    {
+      resolve: '@fs/gatsby-plugin-drive',
+      options: {
+        folderId: process.env.GALLERY_SHOP_FOLDER_ID,
+        key: JSON.parse(process.env.GOOGLE_SERVICE_FILE),
+        destination: path.join(__dirname, 'src/images/shop-photos'),
         exportGDocs: true,
         exportMimeType: 'image/jpg',
       }

@@ -15,6 +15,7 @@
 
     ```shell
     cd daryana-web-site/
+    touch .env #create file with required env variables
     gatsby develop
     ```
 

@@ -23,6 +23,7 @@ export const query = graphql`
               contact
               home
               work
+              shop
             }
             work {
               description
@@ -35,6 +36,23 @@ export const query = graphql`
             index {
               description
               title
+            }
+            shop {
+              description
+              title
+              terms {
+                title
+                list
+              }
+              shop
+              prices {
+                image
+                title
+                subtitle
+                includesText
+                includesList
+                price
+              }
             }
           }
         }
