@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import LogoImage from "../components/logo-image";
 import { useTranslations } from "../components/use-translations"
 
@@ -59,13 +59,11 @@ const Gallery = () => {
             key={image.node.base.split(".")[0]}
             className={style.photoElement}
           >
-            <a href="#">
-              <Img
-                key={image.node.base.split(".")[0]}
-                fluid={image.node.childImageSharp.fluid}
-                alt={image.node.base.split(".")[0]}
-              />
-            </a>
+            <Img
+              key={image.node.base.split(".")[0]}
+              fluid={image.node.childImageSharp.fluid}
+              alt={image.node.base.split(".")[0]}
+            />
           </div>
         ))}
       </div>
@@ -75,12 +73,10 @@ const Gallery = () => {
             key={image.node.base.split(".")[0]}
             className={style.photoElement}
           >
-            <a href="#">
-              <Img
-                fluid={image.node.childImageSharp.fluid}
-                alt={image.node.base.split(".")[0]}
-              />
-            </a>
+            <Img
+              fluid={image.node.childImageSharp.fluid}
+              alt={image.node.base.split(".")[0]}
+            />
           </div>
         ))}
       </div>
@@ -96,7 +92,7 @@ const Work = ({ pageContext }) => {
   
   return (
     <>
-      <SEO
+      <Seo
         title={translations.work.title}
         description={translations.work.description}
       />

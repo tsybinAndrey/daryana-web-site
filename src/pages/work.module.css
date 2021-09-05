@@ -64,25 +64,6 @@
   padding: 2px;
 }
 
-.photoElement a {
-  display: block;
-  position: relative;
-}
-
-.photoElement a:after {
-  content: "";
-  position: absolute;
-  width: 100%; height:100%;
-  top:0;
-  left:0;
-  background:rgba(0,0,0,0.6);
-  opacity: 0;
-}
-
-.photoElement a:hover:after {
-  opacity: 1;
-}
-
 .photoElement img {
   width: 100%;
   display: block;

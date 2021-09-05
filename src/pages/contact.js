@@ -1,8 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import * as style from "./contact.module.css"
 import { useTranslations } from "../components/use-translations"
+import TextLogo from "../components/text-logo"
+import Subtitle from "../components/subtitle"
 
 const ContactPage = ({ pageContext }) => {
   const { locale, isDefaultLocale } = pageContext
@@ -12,15 +13,14 @@ const ContactPage = ({ pageContext }) => {
 
   return (
     <>
-      <SEO
+      <Seo
         title={translations.contact.title}
         description={translations.contact.description}
       />
       <div className={style.contact}>
-        <div className={style.contactTitle}>
-          <h1>DARYANA OSOTKINA</h1>
-          <h2>Photography</h2>
-          <p><Link to={homeLink}>{translations.menu.home}</Link></p>
+        <div>
+          <TextLogo to={homeLink} />
+          <Subtitle text="Photography" />
         </div>
         <div className={style.contactContent}>
           <h3>{translations.menu.contact}</h3>
@@ -30,12 +30,14 @@ const ContactPage = ({ pageContext }) => {
           <p>
             <a
               target="_blank"
+              rel="noreferrer"
               title="Contact Me On WhatsApp"
               href="https://wa.me/79824410176?text=Hi%2C%20I%20wanna%20get%20some%20info!"
             >WhatsApp</a>
             &nbsp;
             <a
               target="_blank"
+              rel="noreferrer"
               title="Contact Me On Telegram"
               href="https://t.me/osotkinaph"
             >Telegram</a>

@@ -2,11 +2,13 @@ import React from 'react'
 import {Card} from 'primereact/card'
 import {Divider} from 'primereact/divider'
 import Img from 'gatsby-image'
-import {useStaticQuery, graphql, Link} from 'gatsby'
+import {useStaticQuery, graphql} from 'gatsby'
 
 import * as pageStyles from "./index.module.css"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
+import TextLogo from '../../components/text-logo'
 import { useTranslations } from "../../components/use-translations"
+import Subtitle from '../../components/subtitle'
 
 function getPhotoByFileName(fileName, images) {
   for (let image of images) {
@@ -58,7 +60,7 @@ const ShopPage = ({ pageContext }) => {
 
   return (
     <>
-      <SEO
+      <Seo
         title={translations.shop.title}
         description={translations.shop.description}
       />
@@ -66,14 +68,9 @@ const ShopPage = ({ pageContext }) => {
         className="p-grid p-justify-center p-nogutter"
         style={{backgroundColor: "#eeeeee"}}
       >
-        <div className={pageStyles.contactTitle}>
-          
-          <h1>
-            <Link to={homeLink}>
-              DARYANA OSOTKINA
-            </Link>
-          </h1>
-          <h2>SHOP</h2>
+        <div>
+          <TextLogo to={homeLink} />
+          <Subtitle text="SHOP" />
         </div>
         <div className="p-col-11 p-nogutter">
           {/* <Divider align="left">
