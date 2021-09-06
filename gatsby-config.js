@@ -1,13 +1,13 @@
 const path = require('path')
 const fs = require('fs')
 
-function generateGDocsPluginConf(destination) {
+function generateGDocsPluginConf(folderId, destination) {
   return {
     resolve: '@fs/gatsby-plugin-drive',
     options: {
-      folderId: process.env.GALLERY_LEFT_FOLDER_ID,
+      folderId,
       key: JSON.parse(process.env.GOOGLE_SERVICE_FILE),
-      destination: destination,
+      destination,
       exportGDocs: true,
       exportMimeType: 'image/jpg',
     }
@@ -20,11 +20,20 @@ if (environment === 'development') {
   require('dotenv').config()
 }
 
-const galleryLeftPath = path.join(__dirname, 'src/images/gallery-left')
-const galleryRightPath = path.join(__dirname, 'src/images/gallery-right')
-const shopPhotosPath = path.join(__dirname, 'src/images/shop-photos')
+const galleryLeftIds = {
+  folderId: process.env.GALLERY_LEFT_FOLDER_ID,
+  destination: path.join(__dirname, 'src/images/gallery-left'),
+}
+const galleryRightIds = {
+  folderId: process.env.GALLERY_RIGHT_FOLDER_ID,
+  destination: path.join(__dirname, 'src/images/gallery-right'),
+}
+const shopPhotosIds = {
+  folderId: process.env.GALLERY_SHOP_FOLDER_ID,
+  destination: path.join(__dirname, 'src/images/shop-photos')
+}
 
-const gdocsPaths = [galleryLeftPath,galleryRightPath,shopPhotosPath]
+const gdocsPaths = [galleryLeftIds,galleryRightIds,shopPhotosIds]
 
 const plugins = [
   `gatsby-plugin-react-helmet`
@@ -32,9 +41,9 @@ const plugins = [
 
 // Trigger GDocs API only if folders does not exists
 // Use yarn clean:gallery command to delete photos
-for (const gDocPath of gdocsPaths) {
-  if (!fs.existsSync(gDocPath)) {
-    const gDocConf = generateGDocsPluginConf(gDocPath)
+for (const gDocId of gdocsPaths) {
+  if (!fs.existsSync(gDocId.destination)) {
+    const gDocConf = generateGDocsPluginConf(gDocId.folderId, gDocId.destination)
     plugins.push(gDocConf)
   }
 }
