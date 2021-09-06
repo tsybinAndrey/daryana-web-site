@@ -2,13 +2,17 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-import SEO from "../components/seo"
-import LogoImage from "../components/logo-image";
+import Seo from "../components/seo"
+import TextLogo from "../components/text-logo"
+import Subtitle from "../components/subtitle"
 import { useTranslations } from "../components/use-translations"
 
 import * as style from "./work.module.css"
 
 const Gallery = () => {
+  // TODO
+  // Switch to "gatsby-plugin-image" for better performance and a simpler API
+  // See https://gatsby.dev/migrate-images to learn how.
   const data = useStaticQuery(graphql`
     query {
       left: allFile(
@@ -59,13 +63,11 @@ const Gallery = () => {
             key={image.node.base.split(".")[0]}
             className={style.photoElement}
           >
-            <a href="#">
-              <Img
-                key={image.node.base.split(".")[0]}
-                fluid={image.node.childImageSharp.fluid}
-                alt={image.node.base.split(".")[0]}
-              />
-            </a>
+            <Img
+              key={image.node.base.split(".")[0]}
+              fluid={image.node.childImageSharp.fluid}
+              alt={image.node.base.split(".")[0]}
+            />
           </div>
         ))}
       </div>
@@ -75,12 +77,10 @@ const Gallery = () => {
             key={image.node.base.split(".")[0]}
             className={style.photoElement}
           >
-            <a href="#">
-              <Img
-                fluid={image.node.childImageSharp.fluid}
-                alt={image.node.base.split(".")[0]}
-              />
-            </a>
+            <Img
+              fluid={image.node.childImageSharp.fluid}
+              alt={image.node.base.split(".")[0]}
+            />
           </div>
         ))}
       </div>
@@ -96,21 +96,22 @@ const Work = ({ pageContext }) => {
   
   return (
     <>
-      <SEO
+      <Seo
         title={translations.work.title}
         description={translations.work.description}
       />
-      <div className={style.work}>
-        <div className={style.header}>
-          <div>
-            <a href={homeLink}>{translations.menu.home}</a>
-          </div>
-          <div>
-            <LogoImage className={style.logoImg}/>
-          </div>
+      <div
+        className="p-grid p-justify-center p-nogutter"
+        style={{backgroundColor: "#eeeeee"}}
+      >
+        <div className="p-col-12 p-nogutter">
+          <TextLogo to={homeLink} />
+          <Subtitle text="WORK" />
         </div>
-        <div className={style.gallery}>
-          <Gallery />
+        <div className="p-col-12 p-lg-10 p-xl-9 p-nogutter">
+          <div className={style.gallery}>
+            <Gallery />
+          </div>
         </div>
       </div>
     </>

@@ -1,0 +1,11 @@
+.title {
+  font-family: 'Courier New';
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 0.2em;
+}
+
+.title a {
+  color: #000;
+  text-decoration: none;
+}

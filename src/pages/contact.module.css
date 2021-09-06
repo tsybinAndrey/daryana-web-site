@@ -14,25 +14,6 @@
   background-color: #eeeeee;
 }
 
-.contactTitle {
-  text-align: center;
-}
-
-.contactTitle > h1 {
-  font-weight: normal;
-  margin-bottom: 0.2em;
-}
-
-.contactTitle > h2 {
-  letter-spacing: 0.7em;
-  font-weight: normal;
-  font-size: 1em;
-}
-
-.contactTitle a {
-  color: #000;
-}
-
 .contactContent {
   text-align: center;
 }

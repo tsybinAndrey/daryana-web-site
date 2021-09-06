@@ -3,7 +3,7 @@ import { Link, navigate } from "gatsby"
 
 import BackgroundImage from "../components/background-image"
 import LogoImage from "../components/logo-image"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { useTranslations } from "../components/use-translations";
 
 import * as style from "./index.module.css"
@@ -29,7 +29,7 @@ const IndexPage = ({ pageContext }) => {
 
   return (
     <>
-      <SEO
+      <Seo
         lang={locale}
         title={translations.index.title}
         description={translations.index.description}
