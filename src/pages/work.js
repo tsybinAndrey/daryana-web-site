@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Seo from "../components/seo"
 import TextLogo from "../components/text-logo"
@@ -13,79 +13,63 @@ const Gallery = () => {
   // TODO
   // Switch to "gatsby-plugin-image" for better performance and a simpler API
   // See https://gatsby.dev/migrate-images to learn how.
-  const data = useStaticQuery(graphql`
-    query {
-      left: allFile(
-        filter: {
-          extension: { regex: "/(jpg)/" }
-          relativeDirectory: { eq: "gallery-left" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-      right: allFile(
-        filter: {
-          extension: { regex: "/(jpg)/" }
-          relativeDirectory: { eq: "gallery-right" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+  const data = useStaticQuery(graphql`{
+  left: allFile(
+    filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "gallery-left"}}
+  ) {
+    edges {
+      node {
+        base
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-  `)
+  }
+  right: allFile(
+    filter: {extension: {regex: "/(jpg)/"}, relativeDirectory: {eq: "gallery-right"}}
+  ) {
+    edges {
+      node {
+        base
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
+    }
+  }
+}`)
 
   const leftColumn = data.left.edges
   const rightColumn = data.right.edges
 
-  return (
-    <>
-      <div className={style.photoColumnLeft}>
-        {leftColumn.map(image => (
-          <div
+  return <>
+    <div className={style.photoColumnLeft}>
+      {leftColumn.map(image => (
+        <div
+          key={image.node.base.split(".")[0]}
+          className={style.photoElement}
+        >
+          <GatsbyImage
+            image={image.node.childImageSharp.gatsbyImageData}
             key={image.node.base.split(".")[0]}
-            className={style.photoElement}
-          >
-            <Img
-              key={image.node.base.split(".")[0]}
-              fluid={image.node.childImageSharp.fluid}
-              alt={image.node.base.split(".")[0]}
-            />
-          </div>
-        ))}
-      </div>
-      <div className={style.photoColumnRight}>
-        {rightColumn.map(image => (
-          <div
-            key={image.node.base.split(".")[0]}
-            className={style.photoElement}
-          >
-            <Img
-              fluid={image.node.childImageSharp.fluid}
-              alt={image.node.base.split(".")[0]}
-            />
-          </div>
-        ))}
-      </div>
-    </>
-  )
+            alt={image.node.base.split(".")[0]} />
+        </div>
+      ))}
+    </div>
+    <div className={style.photoColumnRight}>
+      {rightColumn.map(image => (
+        <div
+          key={image.node.base.split(".")[0]}
+          className={style.photoElement}
+        >
+          <GatsbyImage
+            image={image.node.childImageSharp.gatsbyImageData}
+            alt={image.node.base.split(".")[0]} />
+        </div>
+      ))}
+    </div>
+  </>;
 }
 
 const Work = ({ pageContext }) => {

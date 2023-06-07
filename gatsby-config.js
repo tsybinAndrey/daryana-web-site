@@ -67,23 +67,17 @@ plugins.push(...[
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
   {
-    resolve: `gatsby-plugin-manifest`,
+    resolve: `gatsby-plugin-google-gtag`,
     options: {
-      name: `gatsby-starter-default`,
-      short_name: `DaryanaPhoto`,
-      start_url: `/`,
-      background_color: `#333333`,
-      theme_color: `#333333`,
-      display: `minimal-ui`,
-      icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
+      trackingIds: [
+        "UA-81233047-2", 
+        "G-SZQSFMB9SB",
+      ],
+      pluginConfig: {
+        head: true,
+      },
     },
   },
-  {
-    resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      trackingId: `UA-81233047-2`,
-    },
-  }
 ])
 
 module.exports = {
