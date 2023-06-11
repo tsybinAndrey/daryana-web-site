@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 import BackgroundImage from "../components/background-image"
 import LogoImage from "../components/logo-image"
@@ -56,18 +57,18 @@ const IndexPage = ({ pageContext }) => {
             </select>
           </div>
           <div>
-            <a
+            <OutboundLink
               className={style.iconWrapper}
               href="https://www.instagram.com/osotkinadaryana/"
             >
               <svg className={style.social} viewBox="0 0 64 64"><use className={style.useIcon} xlinkHref="#instagram-icon"></use><use className={style.useMask} xlinkHref="#instagram-mask"></use></svg>
-            </a>
-            <a
+            </OutboundLink>
+            <OutboundLink
               className={style.iconWrapper}
               href="https://www.facebook.com/daryana.osotkina.3"
             >
               <svg className={style.social} viewBox="0 0 64 64"><use className={style.useIcon} xlinkHref="#facebook-icon"></use><use className={style.useMask} xlinkHref="#facebook-mask"></use></svg>
-            </a>
+            </OutboundLink>
           </div>
         </footer>
       </div>
