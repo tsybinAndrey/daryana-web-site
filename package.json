@@ -50,7 +50,7 @@
     "url": "https://github.com/tsybinAndrey/daryana-web-site.git"
   },
   "engines": {
-    "node": ">=15",
+    "node": ">=18",
     "npm": "~9.5.1"
   },
   "os": [
