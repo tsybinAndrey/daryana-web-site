@@ -70,7 +70,6 @@ plugins.push(...[
     resolve: `gatsby-plugin-google-gtag`,
     options: {
       trackingIds: [
-        "UA-81233047-2", 
         "G-SZQSFMB9SB",
       ],
       pluginConfig: {

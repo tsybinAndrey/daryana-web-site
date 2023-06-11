@@ -44,14 +44,6 @@ const ShopPage = ({ pageContext }) => {
 
   const header = (fluid, alt) => <GatsbyImage image={fluid} alt={alt} />
 
-  const footer = (price) => (
-    <div
-      className={pageStyles.price}  
-    >
-      <span>{price}</span>
-    </div>
-  )
-
   return <>
     <Seo
       title={translations.shop.title}
@@ -87,7 +79,6 @@ const ShopPage = ({ pageContext }) => {
                   image.node.childImageSharp.gatsbyImageData,
                   image.node.base.split(".")[0],
                 )}
-                footer={footer(shotType.price)}
               >
                 <b>{shotType.includesText}</b><br/>
                 <ul

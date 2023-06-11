@@ -51,7 +51,6 @@ export const query = graphql`
                 subtitle
                 includesText
                 includesList
-                price
               }
             }
           }
