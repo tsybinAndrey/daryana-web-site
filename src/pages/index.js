@@ -1,9 +1,7 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
-
-import BackgroundImage from "../components/background-image"
-import LogoImage from "../components/logo-image"
+import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import { useTranslations } from "../components/use-translations";
 
@@ -36,11 +34,23 @@ const IndexPage = ({ pageContext }) => {
         description={translations.index.description}
       />
       <div className={style.background}>
-        <BackgroundImage className={style.backgroundImage}/>
+        <StaticImage
+          width={800}
+          layout="constrained"
+          className={style.backgroundImage}
+          src="../images/main-background.jpg"
+          alt="Osotkina Daryana Main Page Photo"
+        />
       </div>
       <div className={style.content}>
         <div>
-          <LogoImage className={style.logoImg} />
+          <StaticImage
+            width={300}
+            layout="constrained"
+            className={style.logoImg}
+            alt="Osotkina Daryana Logo"
+            src="../images/logo.png"
+          />
         </div>
         <div className={style.menuBlock}>
           <ul>
