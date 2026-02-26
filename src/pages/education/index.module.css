@@ -1,0 +1,51 @@
+.pageTitle {
+  margin: 0 0 1rem;
+  color: #272727;
+}
+
+.tabButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabButton {
+  border: 1px solid #b8b8b8;
+  background: #ffffff;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.activeTab {
+  background: #272727;
+  color: #ffffff;
+  border-color: #272727;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.lessonCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.1rem;
+  border: 1px solid #d7d7d7;
+}
+
+.metaText {
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.ctaLink {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 700;
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "advanced-color",
+    "title": "Advanced Color Grading",
+    "description": "Build a consistent signature look from RAW conversion to final export.",
+    "duration": "6 weeks",
+    "lessonCount": 12,
+    "ctaLabel": "Apply now",
+    "ctaLink": "/contact"
+  },
+  {
+    "id": "advanced-brand",
+    "title": "Photography Business & Branding",
+    "description": "Packaging, pricing, communication scripts, and repeatable client workflows.",
+    "duration": "4 weeks",
+    "lessonCount": 8,
+    "ctaLabel": "Reserve a spot",
+    "ctaLink": "/contact"
+  },
+  {
+    "id": "advanced-wedding",
+    "title": "Wedding Storytelling Intensive",
+    "description": "End-to-end wedding day strategy, shot list systems, and culling speedups.",
+    "duration": "8 weeks",
+    "lessonCount": 16,
+    "ctaLabel": "Join waitlist",
+    "ctaLink": "/contact"
+  }
+]

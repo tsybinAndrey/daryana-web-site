@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "portrait-lighting-bootcamp",
+    "title": "Portrait Lighting Bootcamp",
+    "date": "2026-04-18",
+    "location": "Moscow Studio 7",
+    "price": "4 900 ₽",
+    "summary": "A practical one-day intensive on indoor and outdoor portrait lighting setups.",
+    "agenda": [
+      "09:30 — Check-in and welcome coffee",
+      "10:00 — Core lighting theory and setup walkthrough",
+      "12:00 — Live model shooting session",
+      "14:00 — Lunch break",
+      "15:00 — Small-group practice rotations",
+      "17:30 — Q&A and portfolio feedback"
+    ],
+    "audience": [
+      "Beginner and intermediate portrait photographers",
+      "Creators who want predictable lighting in any weather",
+      "Students preparing for paid client sessions"
+    ],
+    "whatToBring": [
+      "Camera with charged batteries",
+      "50mm or 85mm lens (recommended)",
+      "Laptop/tablet for reviewing sample edits",
+      "Notebook for setup diagrams"
+    ],
+    "registrationLink": "https://timepad.ru/event-placeholder-portrait",
+    "timepadContainerId": "timepad-registration-portrait-lighting-bootcamp"
+  },
+  {
+    "slug": "editing-masterclass",
+    "title": "Editing Workflow Masterclass",
+    "date": "2026-05-09",
+    "location": "Online (Zoom)",
+    "price": "2 500 ₽",
+    "summary": "Optimize your post-production process from import presets to delivery exports.",
+    "agenda": [
+      "11:00 — Catalog structure and backup strategy",
+      "12:30 — Color correction decision tree",
+      "14:00 — Break",
+      "14:30 — Batch editing shortcuts",
+      "16:00 — Export presets and client delivery"
+    ],
+    "audience": [
+      "Photographers handling large weekly edit volumes",
+      "Freelancers looking to reduce turnaround time",
+      "Anyone moving from manual to systemized editing"
+    ],
+    "whatToBring": [
+      "Lightroom Classic (or equivalent) installed",
+      "At least 100 RAW files for practice",
+      "Stable internet connection"
+    ],
+    "registrationLink": "https://timepad.ru/event-placeholder-editing",
+    "timepadContainerId": "timepad-registration-editing-masterclass"
+  }
+]
