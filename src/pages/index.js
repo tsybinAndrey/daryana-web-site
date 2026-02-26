@@ -1,9 +1,10 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
-import { useTranslations } from "../components/use-translations";
+import { useTranslations } from "../components/use-translations"
+import MainNavigation from "../components/main-navigation"
 
 import * as style from "./index.module.css"
 
@@ -12,9 +13,6 @@ const IndexPage = ({ pageContext }) => {
 
   const translations = useTranslations(locale)
 
-  const workLink = isDefaultLocale ? "/work/" : `/${locale}/work/`
-  const contactLink = isDefaultLocale ? "/contact/" : `/${locale}/contact/`
-  const shopLink = isDefaultLocale ? "/shop/" : `/${locale}/shop/`
 
   // TODO
   // move it to separate component with proper state handling
@@ -53,11 +51,7 @@ const IndexPage = ({ pageContext }) => {
           />
         </div>
         <div className={style.menuBlock}>
-          <ul>
-            <li><Link to={workLink}>{translations.menu.work.toLowerCase()}</Link></li>
-            <li><Link to={contactLink}>{translations.menu.contact.toLowerCase()}</Link></li>
-            <li><Link to={shopLink}>{translations.menu.shop.toLowerCase()}</Link></li>
-          </ul>
+          <MainNavigation locale={locale} isDefaultLocale={isDefaultLocale} />
         </div>
         <footer>
           <div className={style.footerUpperBlock}>
